@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Roadmap{% endblock %}
+{% block header %}AI - Roadmap{% endblock %}
+
+{% block content %}
+<div class="roadmap-container">
+    <h1>Plan Your Future Goals</h1>
+    <textarea id="goals-input" placeholder="Describe your goals..."></textarea>
+    <button id="generate-roadmap-btn">Generate Roadmap</button>
+
+</div>
+<div id="roadmap-flowchart">
+    <!-- Flowchart will be dynamically rendered here -->
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/roadmap.css') }}">
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script src="{{ url_for('static', filename='js/roadmap.js') }}"></script>
+
+{% endblock %}

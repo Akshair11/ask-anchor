@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Mock Interview{% endblock %}
+
+{% block header %}AI - Mock Interview{% endblock %}
+
+{% block content %}
+<div class="mock-interview-container">
+    <h2>Prepare for Your Interview</h2>
+    <textarea id="interview-description" placeholder="Describe your upcoming interview..."></textarea>
+    <button id="prepare-questions-btn">Generate Questions</button>
+    <div id="questions-container"></div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mock_interview.css') }}">
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/mock_interview.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,125 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #f0f0f0;
+    background-color: #105999;
+    
+}
+
+/* Layout styles */
+.layout {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2c2c2c;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar h2 {
+    color: #ff69b4;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    color: #ff69b4;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-header {
+    background-color: #f857a6;
+    padding: 20px;
+    text-align: center;
+    color: #f3e3e3;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.page-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #1a1a1a;
+    overflow-y: auto;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #0c1b33;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar .logo img {
+    width: 100%;
+    margin-top: -50px;
+    margin-left: -20px;
+    /* margin-bottom: 20px; */
+}
+
+.sidebar nav ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.sidebar nav ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+    background: #333;
+    color: #ff69b4;
+    transform: translateX(10px);
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My App{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body>
+    <div class="layout">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/" class="{{ 'active' if 'chatbot' in request.path else '' }}"><i class="fas fa-comments"></i> Chatbot</a></li>
+                    <li><a href="/mock_interview" class="{{ 'active' if 'mock_interview' in request.path else '' }}"><i class="fas fa-user-tie"></i> Mock Interview</a></li>
+                    <li><a href="/roadmap" class="{{ 'active' if 'roadmap' in request.path else '' }}"><i class="fas fa-map"></i> Roadmap</a></li>
+                    <li><a href="/resume_review" class="{{ 'active' if 'resume_review' in request.path else '' }}"><i class="fas fa-file-alt"></i> Resume Review</a></li>
+                </ul>
+            </nav>
+        </div>
+        <main class="content">
+            <header class="page-header">
+                <h1>{% block header %}Page Header{% endblock %}</h1>
+            </header>
+            <section class="page-content">
+                {% block content %}{% endblock %}
+            </section>
+        </main>
+    </div>
+    {% block extra_js %}
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+
+    {% endblock %}
+</body>
+
+</html>

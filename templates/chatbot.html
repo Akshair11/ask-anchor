@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Chatbot{% endblock %}
+{% block header %}AI - Chatbot{% endblock %}
+
+{% block content %}
+<div class="chatbot-container">
+    <h1>Student Chatbot</h1>
+    <div class="chatbox" id="chatbox">
+        <!-- Dynamic chat messages will appear here -->
+    </div>
+    <div class="chat-input-area">
+        <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+        <button id="send-btn"><i class="fas fa-paper-plane"></i>></button>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chatbot.css') }}">
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+{% endblock %}
